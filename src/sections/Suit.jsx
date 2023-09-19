@@ -26,11 +26,11 @@ const Suit = () => {
               <button
                 key={index}
                 onClick={() => setActiveCircle(index)}
-                className={`${circleClass + item.positionSm} ${
+                className={`${circleClass + item.position} ${
                   activeCircle == index
                     ? "bg-blue-500 border-blue-300"
                     : "bg-white border-gray-300"
-                } lg:${item.positionLg}  `}
+                }`}
               />
             ))}
             {details.map((item, index) => (
@@ -63,28 +63,22 @@ const Suit = () => {
 
 const buttonPositions = [
   {
-    positionLg: " left-[47.5%] top-[18%] ",
-    positionSm: " left-[46%] top-[26%] ",
+    position: " left-[46%] top-[26%] lg:left-[47.5%] lg:top-[18%] ",
   },
   {
-    positionLg: " left-[53%] top-[16%] ",
-    positionSm: " left-[54%] top-[24%] ",
+    position: " left-[54%] top-[24%] lg:left-[53%] lg:top-[16%]",
   },
   {
-    positionLg: " left-[56%] top-[42%] ",
-    positionSm: " left-[63%] top-[45%] ",
+    position: " left-[63%] top-[45%] lg:left-[56%] lg:top-[42%]",
   },
   {
-    positionLg: " left-[56%] top-[54.5%] ",
-    positionSm: " left-[62%] top-[54.5%] ",
+    position: " left-[62%] top-[54.5%] lg:left-[56%] lg:top-[54.5%] ",
   },
   {
-    positionLg: " left-[45%] top-[49%] ",
-    positionSm: " left-[38%] top-[52%] ",
+    position: " left-[38%] top-[52%] lg:left-[45%] lg:top-[49%]",
   },
   {
-    positionLg: " left-[47%] top-[65%] ",
-    positionSm: " left-[44%] top-[62%] ",
+    position: " left-[44%] top-[62%] lg:left-[47%] lg:top-[65%]",
   },
   ,
 ];

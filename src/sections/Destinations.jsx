@@ -15,40 +15,85 @@ const Destinations = () => {
   const isDesktop = useMediaQuery({ query: "(min-width: 768px)" });
 
   //iss scroll animation
-  const issRotateProgress = isDesktop
-    ? useSpring(useTransform(scrollYProgress, [0, 1], [-10, 0]))
-    : useSpring(useTransform(scrollYProgress, [0, 1], [25, 27]));
+  const desktopIssRotate = useSpring(
+    useTransform(scrollYProgress, [0, 1], [-10, 0])
+  );
+  const mobileIssRotate = useSpring(
+    useTransform(scrollYProgress, [0, 1], [25, 27])
+  );
+  const issRotateProgress = isDesktop ? desktopIssRotate : mobileIssRotate;
 
+  const desktopIssImgRotate = useSpring(
+    useTransform(scrollYProgress, [0, 1], [10, 0])
+  );
+  const mobileIssImgRotate = useSpring(
+    useTransform(scrollYProgress, [0, 1], [-25, -27])
+  );
   const issImgRotateProgress = isDesktop
-    ? useSpring(useTransform(scrollYProgress, [0, 1], [10, 0]))
-    : useSpring(useTransform(scrollYProgress, [0, 1], [-25, -27]));
+    ? desktopIssImgRotate
+    : mobileIssImgRotate;
 
   //dragon scroll animation
+
+  const desktopDragonRotate = useSpring(
+    useTransform(scrollYProgress, [0, 1], [5, 25])
+  );
+  const mobileDragonRotate = useSpring(
+    useTransform(scrollYProgress, [0, 1], [35, 38])
+  );
   const dragonRotateProgress = isDesktop
-    ? useSpring(useTransform(scrollYProgress, [0, 1], [5, 25]))
-    : useSpring(useTransform(scrollYProgress, [0, 1], [35, 38]));
+    ? desktopDragonRotate
+    : mobileDragonRotate;
+
+  const deskTopDragonImgRotate = useSpring(
+    useTransform(scrollYProgress, [0, 1], [-5, -25])
+  );
+  const mobileDragonImgRotate = useSpring(
+    useTransform(scrollYProgress, [0, 1], [-35, -38])
+  );
 
   const dragonImgRotateProgress = isDesktop
-    ? useSpring(useTransform(scrollYProgress, [0, 1], [-5, -25]))
-    : useSpring(useTransform(scrollYProgress, [0, 1], [-35, -38]));
+    ? deskTopDragonImgRotate
+    : mobileDragonImgRotate;
 
   //moon scroll animation
-  const moonRotateProgress = isDesktop
-    ? useSpring(useTransform(scrollYProgress, [0, 1], [45, 60]))
-    : useSpring(useTransform(scrollYProgress, [0, 1], [50, 55]));
+  const desktopMoonRotate = useSpring(
+    useTransform(scrollYProgress, [0, 1], [45, 60])
+  );
+  const mobileMoonRotate = useSpring(
+    useTransform(scrollYProgress, [0, 1], [50, 55])
+  );
+  const moonRotateProgress = isDesktop ? desktopMoonRotate : mobileMoonRotate;
 
+  const desktopMoonImgRotate = useSpring(
+    useTransform(scrollYProgress, [0, 1], [-45, -60])
+  );
+  const mobileMoonImgRotate = useSpring(
+    useTransform(scrollYProgress, [0, 1], [-50, -55])
+  );
   const moonImgRotateProgress = isDesktop
-    ? useSpring(useTransform(scrollYProgress, [0, 1], [-45, -60]))
-    : useSpring(useTransform(scrollYProgress, [0, 1], [-50, -55]));
+    ? desktopMoonImgRotate
+    : mobileMoonImgRotate;
 
   //mars scroll animation
-  const marsRotateProgress = isDesktop
-    ? useSpring(useTransform(scrollYProgress, [0, 1], [73, 80]))
-    : useSpring(useTransform(scrollYProgress, [0, 1], [50, 52]));
 
+  const desktopMarsRotate = useSpring(
+    useTransform(scrollYProgress, [0, 1], [73, 80])
+  );
+  const mobileMarsRotate = useSpring(
+    useTransform(scrollYProgress, [0, 1], [50, 52])
+  );
+  const marsRotateProgress = isDesktop ? desktopMarsRotate : mobileMarsRotate;
+
+  const desktopMarsImgRotate = useSpring(
+    useTransform(scrollYProgress, [0, 1], [-73, -80])
+  );
+  const mobileMarsImgRotate = useSpring(
+    useTransform(scrollYProgress, [0, 1], [-50, -52])
+  );
   const marsImgRotateProgress = isDesktop
-    ? useSpring(useTransform(scrollYProgress, [0, 1], [-73, -80]))
-    : useSpring(useTransform(scrollYProgress, [0, 1], [-50, -52]));
+    ? desktopMarsImgRotate
+    : mobileMarsImgRotate;
 
   return (
     <section ref={containerRef} className="overflow-hidden mt-10">

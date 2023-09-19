@@ -125,7 +125,7 @@ const MoonOrbitTab = () => {
         </p>
       </div>
       <p className="mt-6">
-        Single seat and missions available to the Moon's orbit
+        Single seat and missions available to the Moon&apos;s orbit
       </p>
     </motion.div>
   );
@@ -153,10 +153,10 @@ const MarsOrbitTab = () => {
 };
 
 const taps = [
-  <EarthOrbitTab />,
-  <IssOrbitTab />,
-  <MoonOrbitTab />,
-  <MarsOrbitTab />,
+  <EarthOrbitTab key={1} />,
+  <IssOrbitTab key={2} />,
+  <MoonOrbitTab key={3} />,
+  <MarsOrbitTab key={4} />,
 ];
 
 export default MissionTabs;

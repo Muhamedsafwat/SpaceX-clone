@@ -64,7 +64,12 @@ const History = () => {
         }}
         ref={containerRef}
       >
-        <Image src="/horizon.webp" fill className="object-cover" />
+        <Image
+          src="/horizon.webp"
+          fill
+          className="object-cover"
+          alt="horizon"
+        />
       </motion.div>
       <section className="pb-28">
         <h2 className="text-3xl lg:text-4xl mx-5 font-semibold text-center my-16">

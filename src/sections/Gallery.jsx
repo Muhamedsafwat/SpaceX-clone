@@ -47,7 +47,7 @@ const Gallery = () => {
   };
 
   return (
-    <section id="gallery" className="pb-20">
+    <section id="gallery" className="pb-20 w-screen overflow-hidden">
       <Slider {...sliderSettings}>
         {gallery.map((item, index) => (
           <div key={index} className="p-2">

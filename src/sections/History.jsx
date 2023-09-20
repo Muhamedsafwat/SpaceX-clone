@@ -56,22 +56,22 @@ const History = () => {
 
   return (
     <>
-      <motion.div
-        className="relative w-full h-16 mt-16 lg:mt-0 lg:h-96"
-        style={{
-          opacity: scrollYProgress,
-          scale: scaleProgress,
-        }}
-        ref={containerRef}
-      >
-        <Image
-          src="/horizon.webp"
-          fill
-          className="object-cover"
-          alt="horizon"
-        />
-      </motion.div>
-      <section className="pb-28">
+      <section className="pb-28 w-screen overflow-hidden">
+        <motion.div
+          className="relative w-full h-16 mt-16 lg:mt-0 lg:h-96"
+          style={{
+            opacity: scrollYProgress,
+            scale: scaleProgress,
+          }}
+          ref={containerRef}
+        >
+          <Image
+            src="/horizon.webp"
+            fill
+            className="object-cover"
+            alt="horizon"
+          />
+        </motion.div>
         <h2 className="text-3xl lg:text-4xl mx-5 font-semibold text-center my-16">
           THE ROAD TO MAKING HUMANITY <br /> MULTIPLANETARY
         </h2>

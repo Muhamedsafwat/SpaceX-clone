@@ -41,7 +41,7 @@ const NavBar = () => {
       </nav>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="ml-auto relative w-5 h-5 z-10"
+        className="ml-auto mr-3 relative w-5 h-5 z-10"
       >
         <div className="relative h-3 [&>*]:w-5 [&>*]:absolute [&>*]:h-[2px] [&>*]:bg-white [&>*]:duration-200 flex flex-col gap-1">
           <div
